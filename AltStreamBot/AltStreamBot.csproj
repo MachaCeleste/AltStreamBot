@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0-windows10.0.26100.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <Title>AltStreamBot</Title>
+    <Version>0.0.1</Version>
+    <Authors>Macha Celeste</Authors>
+    <Company>Celestial Corp</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Speech" Version="9.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AltStreamEventSub">
+      <HintPath>..\..\AltStreamEventSub\AltStreamEventSub\bin\Release\net9.0\AltStreamEventSub.dll</HintPath>
+    </Reference>
+    <Reference Include="AltStreamLib">
+      <HintPath>..\..\AltStreamLib\AltStreamLib\bin\Debug\net9.0\AltStreamLib.dll</HintPath>
+    </Reference>
+    <Reference Include="SseClientLib">
+      <HintPath>..\..\SseClientLib\SseClientLib\bin\Release\net9.0\SseClientLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
