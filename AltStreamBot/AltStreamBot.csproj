@@ -7,25 +7,49 @@
     <Nullable>enable</Nullable>
     <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
     <Title>AltStreamBot</Title>
-    <Version>0.0.1</Version>
+    <Version>0.1.0</Version>
     <Authors>Macha Celeste</Authors>
     <Company>Celestial Corp</Company>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="System.Speech" Version="9.0.8" />
+    <PackageReference Include="System.Windows.Extensions" Version="9.0.8" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="AltStreamEventSub">
-      <HintPath>..\..\AltStreamEventSub\AltStreamEventSub\bin\Release\net9.0\AltStreamEventSub.dll</HintPath>
-    </Reference>
     <Reference Include="AltStreamLib">
       <HintPath>..\..\AltStreamLib\AltStreamLib\bin\Debug\net9.0\AltStreamLib.dll</HintPath>
     </Reference>
     <Reference Include="SseClientLib">
       <HintPath>..\..\SseClientLib\SseClientLib\bin\Release\net9.0\SseClientLib.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Sounds\dialtone.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Sounds\hangup.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Sounds\pickup.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Sounds\redeem.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Sounds\ringer.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

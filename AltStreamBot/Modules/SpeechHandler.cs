@@ -5,6 +5,7 @@ namespace AltStreamBot.Modules;
 public class SpeechHandler
 {
     public bool TTS;
+    public bool SayName;
 
     private SpeechSynthesizer _synth;
     private Dictionary<string, string> _userVoices;
@@ -29,8 +30,15 @@ public class SpeechHandler
 
         _synth.SelectVoice(_userVoices[username.ToLower()]);
 
-        string output = $"{username} said {input}";
+        string output = SayName ? $"{username} said {input}" : input;
+
         SynthAudioPlayer(output);
+    }
+
+    public async void SystemMessage(string input)
+    {
+        _synth.SelectVoice("Microsoft David Desktop");
+        SynthAudioPlayer(input);
     }
 
     public void RerollUserVoice(string username)
