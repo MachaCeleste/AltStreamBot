@@ -9,6 +9,14 @@ To install voices on Win10:
 5) Select any and all voices you want and press `Add` at the bottom
 And that's it the voices should download and install
 
+## AltStream setup
+You will need to add some redeems for this to work
+- Reroll Voice
+- Lose the glasses (optional if you have glasses)
+
+## Sounds
+You can replace any of the sounds in the `Sounds` folder to anything just be sure to rename them to match the originals
+
 ## Setup
 1) Extract contents to any location
 2) Launch `AltStreamBot.exe`
