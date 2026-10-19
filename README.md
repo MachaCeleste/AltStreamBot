@@ -1,6 +1,7 @@
 # AltStreamBot Usage
 ## Pre-setup
 AltStreamBot requires Windows SAPI voices to be installed before use
+
 To install voices on Win10:
 1) Open windows settings with the cog wheel on the start menu
 2) Navigate to `Time & Language`
@@ -21,7 +22,7 @@ You can replace any of the sounds in the `Sounds` folder to anything just be sur
 1) Extract contents to any location
 2) Launch `AltStreamBot.exe`
 3) Enter your channel username when prompted
-4) Use `connect` to start connection to server
+4) Use `connect` command to start connection to server
 
 # Console Commands
 ## `cls` | `clear`
