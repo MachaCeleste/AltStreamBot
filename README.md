@@ -34,5 +34,5 @@ You can replace any of the sounds in the `Sounds` folder to anything just be sur
 ## `sayname`
 - Toggles saying `{username} said` before each TTS message
 
-## SSML TTS
+# SSML TTS
 Included in this repo is a [SSML quick guide](https://github.com/MachaCeleste/AltStreamBot/blob/master/AltStreamBot/Manuals/ssml_cheatsheet.md) for your viewers if they feel like playing with the speech system using markdown language tags
