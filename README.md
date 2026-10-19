@@ -2,6 +2,8 @@
 ## Pre-setup
 AltStreamBot requires Windows SAPI voices to be installed before use
 
+DOES NOT APPEAR TO WORK ON WIN 11 AT THE MOMENT!
+
 To install voices on Win10:
 1) Open windows settings with the cog wheel on the start menu
 2) Navigate to `Time & Language`
