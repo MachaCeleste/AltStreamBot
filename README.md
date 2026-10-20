@@ -17,6 +17,7 @@ You will need to add some redeems for this to work
 
 ## Sounds
 You can replace any of the sounds in the `Sounds` folder to anything just be sure to rename them to match the originals
+**NOTICE**: You must add a `raid.wav` of your own to the sounds folder to get raid sounds
 
 ## Setup
 1) Extract contents to any location
