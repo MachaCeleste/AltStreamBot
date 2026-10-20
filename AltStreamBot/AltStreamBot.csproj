@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
     <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
     <Title>AltStreamBot</Title>
-    <Version>0.1.0</Version>
+    <Version>0.1.4</Version>
     <Authors>Macha Celeste</Authors>
     <Company>Celestial Corp</Company>
   </PropertyGroup>
@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Speech" Version="9.0.8" />
+    <PackageReference Include="System.Speech" Version="10.0.13" />
     <PackageReference Include="System.Windows.Extensions" Version="9.0.8" />
   </ItemGroup>
 
@@ -30,7 +30,7 @@
       <HintPath>..\..\AltStreamLib\AltStreamLib\bin\Debug\net9.0\AltStreamLib.dll</HintPath>
     </Reference>
     <Reference Include="SseClientLib">
-      <HintPath>..\..\SseClientLib\SseClientLib\bin\Release\net9.0\SseClientLib.dll</HintPath>
+      <HintPath>..\..\SseClientLib\SseClientLib\bin\Debug\net9.0\SseClientLib.dll</HintPath>
     </Reference>
   </ItemGroup>
 
@@ -44,6 +44,9 @@
     <None Update="Sounds\pickup.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Sounds\raid.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Sounds\redeem.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -51,5 +54,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if &quot;$(Configuration)&quot;==&quot;Release&quot; call :Package&#xD;&#xA;goto :EOF&#xD;&#xA;&#xD;&#xA;:Package&#xD;&#xA;SET &quot;WINRAR_PATH=C:\Program Files\WinRAR\Rar.exe&quot;&#xD;&#xA;SET &quot;BUILD_ROOT=$(ProjectDir)..\Builds&quot;&#xD;&#xA;SET &quot;SOURCE_DIR=$(TargetDir)&quot;&#xD;&#xA;SET &quot;ARCHIVE_NAME=$(ProjectName)-v$(Version).rar&quot;&#xD;&#xA;if not exist &quot;%25BUILD_ROOT%25&quot; mkdir &quot;%25BUILD_ROOT%25&quot;&#xD;&#xA;&quot;%25WINRAR_PATH%25&quot; a -ep1 -r &quot;%25BUILD_ROOT%25\%25ARCHIVE_NAME%25&quot; &quot;%25SOURCE_DIR%25*&quot;&#xD;&#xA;" />
+  </Target>
 
 </Project>
